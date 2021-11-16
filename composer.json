@@ -1,5 +1,5 @@
 {
-    "name":"nsyilmaz/PHP",
+    "name":"nsyilmaz/php",
     "description":"",
     "require": {
 	"php": ">=7.4",
