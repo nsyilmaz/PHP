@@ -14,6 +14,7 @@ jobs:
             - name: Perform ShiftLeft Scan
               uses: actions/checkout@v1
 
+
             - name: Scan code with Shiftleft
               uses: ShiftLeftSecurity/scan-action@master
               env:
@@ -22,7 +23,7 @@ jobs:
                   SCAN_AUTO_BUILD: true
 
 
-	    - name: Upload results to Github 
+            - name: Upload results to Github 
 	      uses: github/codeql-action/upload-sarif@v1
               with:
                   sarif_file: results.sarif
