@@ -1,0 +1,11 @@
+{
+    "name":"nsyilmaz/PHP",
+    "description":"",
+    "require": {
+	"php": ">=7.4",
+	"ext-json": "*"
+    },
+    "config": {
+	"bin-dir": "bin"
+    }
+}
