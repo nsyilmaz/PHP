@@ -30,7 +30,7 @@ jobs:
                   type: php
                   # type: credscan,java,plsql,php,nodejs,depscan,php
 
-            - name: Upload report
+             - name: Upload report
   uses: actions/upload-artifact@v1.0.0
   with:
     name: shiftleft-scan-reports
