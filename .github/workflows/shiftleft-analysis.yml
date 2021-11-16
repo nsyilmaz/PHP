@@ -27,7 +27,7 @@ jobs:
 
               with:
                   output: reports
-                  type: php
+                  # type: php
                   # type: credscan,java,plsql,php,nodejs,depscan,php
 
             - name: Upload report
