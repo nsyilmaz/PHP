@@ -3,24 +3,26 @@
 # Visit https://slscan.io/en/latest/integrations/github-actions/ for help
 name: ShiftLeft Scan
 
-# This section configures the trigger for the workflow. Feel free to customize depending on your convention
 on:
-  push:
+    push:
 
 jobs:
-  Scan-Build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Perform ShiftLeft Scan
-      uses: ShiftLeftSecurity/scan-action@master
-      env:
-        WORKSPACE: ""
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SCAN_AUTO_BUILD: true
-      with:
-        output: reports
-    - uses: actions/upload-artifact@v1
-      with:
-        name: reports
-        path: reports
+    Shifleft:
+        name: Shiftleft
+        runs-on: ubuntu-latest
+        steps:
+            - name: Perform ShiftLeft Scan
+              uses: actions/checkout@v1
+
+            - name: Scan code with Shiftleft
+              uses: ShiftLeftSecurity/scan-action@master
+              env:
+                  WORKSPACE: ""
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  SCAN_AUTO_BUILD: true
+
+
+	    - name: Upload results to Github 
+	      uses: github/codeql-action/upload-sarif@v1
+              with:
+                  sarif_file: results.sarif
