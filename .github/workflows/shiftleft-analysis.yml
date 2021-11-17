@@ -19,7 +19,7 @@ jobs:
 
 
             - name: Scan code with Shiftleft
-              uses: docker://shiftleft/scan-action
+              uses: docker://shiftleft/scan-action:latest
               #uses: docker://shiftleft/sast-scan
               #uses: ShiftLeftSecurity/sast-scan@master
               #uses: ShiftLeftSecurity/scan-action@master
