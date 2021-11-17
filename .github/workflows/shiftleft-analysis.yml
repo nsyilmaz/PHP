@@ -20,14 +20,3 @@ jobs:
 
             - name: Scan code with Shiftleft
               uses: ShiftLeftSecurity/scan-action@master
-              env:
-                  WORKSPACE: ""
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  SCAN_AUTO_BUILD: true
-              with:
-                  output: reports
-             - name: Upload report
-               uses: actions/upload-artifact@v1.0.0
-               with:
-                   name: shiftleft-scan-reports
-                   path: reports
