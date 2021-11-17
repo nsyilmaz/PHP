@@ -26,7 +26,7 @@ jobs:
                   SCAN_AUTO_BUILD: true
               with:
                   output: reports
-                  type: php
+                  #type: php
              - name: Upload report
                uses: actions/upload-artifact@v1.0.0
                with:
