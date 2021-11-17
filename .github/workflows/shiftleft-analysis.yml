@@ -26,5 +26,5 @@ jobs:
               #uses: ShiftLeftSecurity/sast-scan@master
               uses: ShiftLeftSecurity/scan-action@master
               with:
-                  type: "php"
+                  type: php
                   output: reports
