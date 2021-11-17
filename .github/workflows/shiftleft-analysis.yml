@@ -21,10 +21,10 @@ jobs:
             - name: Scan code with Shiftleft
               #uses: docker://shiftleft/scan-slim:latest
               #uses: docker://shiftleft/sast-scan:latest
-              #uses: ShiftLeftSecurity/sast-scan@master
+              uses: ShiftLeftSecurity/sast-scan@master
               #uses: ShiftLeftSecurity/scan-action@master
               #uses: docker://shiftleft/scan:latest
-              uses: docker://shiftleft/scan-action:latest
+              #uses: docker://shiftleft/scan-action:latest
               with:
                   type: php
                   output: reports
