@@ -19,7 +19,8 @@ jobs:
 
 
             - name: Scan code with Shiftleft
-              uses: ShiftLeftSecurity/scan-action@master
+              uses: ShiftLeftSecurity/sast-scan@master
+              #uses: ShiftLeftSecurity/scan-action@master
               with:
                   type: "php"
                   output: reports
