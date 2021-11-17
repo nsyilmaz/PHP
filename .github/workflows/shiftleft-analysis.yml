@@ -20,3 +20,5 @@ jobs:
 
             - name: Scan code with Shiftleft
               uses: ShiftLeftSecurity/scan-action@master
+	      with:
+	          type: php
